@@ -1,4 +1,4 @@
 
-fn log (s: &str){
-    println!("{}",s);
+fn log (s: &str, level: LogLevel){
+    println!("{} {}", level.to_string(), s);
 }
