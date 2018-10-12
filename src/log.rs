@@ -1,9 +1,9 @@
-
+use log_level::LogLevel;
 use std::io::Write;
 use std::fs::OpenOptions;
 
 
-fn log (s: &str, erlog: LogLevel){
+pub fn log (s: &str, erlog: LogLevel){
 
     //println!("{} {}", erlog.to_string(), s); 
 
@@ -18,5 +18,5 @@ fn log (s: &str, erlog: LogLevel){
             .append(true)
             .open("Nickslist").unwrap();
 
-        file.write(input);
+        file.write(&input.into_bytes());
 }
