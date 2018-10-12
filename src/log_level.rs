@@ -1,9 +1,9 @@
-enum LogLevel {
+pub enum LogLevel {
     Debug, Info, Error, Warning, Fatal
 }
 
 impl LogLevel {
-    fn to_string (&self) -> &str { 
+    pub fn to_string (&self) -> &str { 
         match self {
             Debug => "Debug",
             Info => "Info",
